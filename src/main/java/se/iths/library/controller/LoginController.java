@@ -29,8 +29,6 @@ public class LoginController {
     @Autowired
     LoginService loginService;
 
-
-
     @GetMapping("")
     public String login(){
         return "login";
