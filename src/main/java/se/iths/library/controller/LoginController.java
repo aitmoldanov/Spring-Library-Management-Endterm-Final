@@ -1,5 +1,6 @@
 package se.iths.library.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,6 +25,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/login")
 @PreAuthorize("permitAll()")
+@Api
 public class LoginController {
 
     @Autowired

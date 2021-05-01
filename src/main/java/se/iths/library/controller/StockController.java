@@ -1,5 +1,6 @@
 package se.iths.library.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("stock")
+@Api
 public class StockController {
 
     @Autowired

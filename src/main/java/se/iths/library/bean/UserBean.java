@@ -107,7 +107,7 @@ public class UserBean implements Serializable {
     }
     public void sendMessageByUser(){
         try {
-            setContactToEmail("salim@gmail.com");
+            setContactToEmail("abzal@gmail.com");
             String message = jmsPublishService.publishMessage(new SystemMessage(getContactFromEmail(), getContactToEmail(), getContactSubject(), getContactMessage()));
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, message, "");
             FacesContext.getCurrentInstance().addMessage(null, msg);

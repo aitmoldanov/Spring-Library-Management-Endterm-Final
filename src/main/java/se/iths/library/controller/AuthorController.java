@@ -1,5 +1,6 @@
 package se.iths.library.controller;
 
+import io.swagger.annotations.Api;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
@@ -13,8 +14,9 @@ import se.iths.library.service.AuthorService;
 
 import java.util.Optional;
 
-@RestController
+@RestController("/endpoint")
 @RequestMapping("/author")
+@Api(value = "Author Controller class")
 public class AuthorController {
 
     private AuthorService authorService;
@@ -71,4 +73,5 @@ public class AuthorController {
             throw new NotFoundException("Author not found with id :" + id);
         }
     }
+
 }
